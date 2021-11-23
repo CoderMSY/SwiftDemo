@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,11 @@
 		7EEA2DF322702C0B00FA0B14 /* SwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEA2DF222702C0B00FA0B14 /* SwiftDemoTests.swift */; };
 		7EEA2DFE22702C0B00FA0B14 /* SwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEA2DFD22702C0B00FA0B14 /* SwiftDemoUITests.swift */; };
 		8DF1B9F4BAB70096EDF74E2F /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE69E10D7C4BFC75D275677 /* Pods_SwiftDemo.framework */; };
+		E0DB45AF2743A102008E31BE /* TabBarCtrConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB45AE2743A102008E31BE /* TabBarCtrConfig.swift */; };
+		E0DB45B22743AD88008E31BE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB45B12743AD88008E31BE /* Section.swift */; };
+		E0DB45B42743ADC2008E31BE /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB45B32743ADC2008E31BE /* DataSource.swift */; };
+		E0DB45B62743AECF008E31BE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB45B52743AECF008E31BE /* Configurator.swift */; };
+		E0DB45B82743AEDA008E31BE /* PluginTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB45B72743AEDA008E31BE /* PluginTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		7EEA2DF922702C0B00FA0B14 /* SwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEA2DFD22702C0B00FA0B14 /* SwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoUITests.swift; sourceTree = "<group>"; };
 		7EEA2DFF22702C0B00FA0B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0DB45AE2743A102008E31BE /* TabBarCtrConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCtrConfig.swift; sourceTree = "<group>"; };
+		E0DB45B12743AD88008E31BE /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		E0DB45B32743ADC2008E31BE /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		E0DB45B52743AECF008E31BE /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		E0DB45B72743AEDA008E31BE /* PluginTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,7 @@
 		7E6D492822703C0000E4EAF8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E0DB45B02743AD74008E31BE /* PluginTableView */,
 				7E6D494D227050A100E4EAF8 /* ConfigHeader */,
 				7E6D492922703C1100E4EAF8 /* ATBaseViewController.swift */,
 			);
@@ -171,6 +182,7 @@
 				7E6D49382270400D00E4EAF8 /* ATBaseItemContentView.swift */,
 				7E6D493A2270405100E4EAF8 /* ATBouncesItemContentView.swift */,
 				7E6D493C227040C800E4EAF8 /* ATTabBarCtrConfig.swift */,
+				E0DB45AE2743A102008E31BE /* TabBarCtrConfig.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -293,6 +305,17 @@
 				2DE69E10D7C4BFC75D275677 /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0DB45B02743AD74008E31BE /* PluginTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E0DB45B12743AD88008E31BE /* Section.swift */,
+				E0DB45B32743ADC2008E31BE /* DataSource.swift */,
+				E0DB45B52743AECF008E31BE /* Configurator.swift */,
+				E0DB45B72743AEDA008E31BE /* PluginTableView.swift */,
+			);
+			path = PluginTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,32 +476,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DNSPageView/DNSPageView.framework",
-				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
-				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/JXMarqueeView/JXMarqueeView.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DNSPageView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXMarqueeView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,12 +500,17 @@
 				7E6D494622704F8A00E4EAF8 /* ATHomeVIPViewController.swift in Sources */,
 				7E6D492A22703C1100E4EAF8 /* ATBaseViewController.swift in Sources */,
 				7E6D494C22704FCE00E4EAF8 /* ATHomeRecommendViewController.swift in Sources */,
+				E0DB45B42743ADC2008E31BE /* DataSource.swift in Sources */,
 				7E6D493022703E5E00E4EAF8 /* ATListenViewController.swift in Sources */,
+				E0DB45B62743AECF008E31BE /* Configurator.swift in Sources */,
 				7E6D494F227050D700E4EAF8 /* ATShareMacro.swift in Sources */,
 				7E6D49392270400D00E4EAF8 /* ATBaseItemContentView.swift in Sources */,
+				E0DB45B22743AD88008E31BE /* Section.swift in Sources */,
 				7E6D494322704F6F00E4EAF8 /* ATHomeLiveViewController.swift in Sources */,
+				E0DB45AF2743A102008E31BE /* TabBarCtrConfig.swift in Sources */,
 				7E6D494922704FA200E4EAF8 /* ATHomeClassifyViewController.swift in Sources */,
 				7E6D493322703E7E00E4EAF8 /* ATFindViewController.swift in Sources */,
+				E0DB45B82743AEDA008E31BE /* PluginTableView.swift in Sources */,
 				7EEA2DE022702C0700FA0B14 /* ViewController.swift in Sources */,
 				7E6D492E22703E5000E4EAF8 /* ATMineViewController.swift in Sources */,
 				7EEA2DDE22702C0700FA0B14 /* AppDelegate.swift in Sources */,

@@ -20,13 +20,21 @@ class ATTabBarCtrConfig: NSObject {
         let tabBarController = ESTabBarController()
         tabBarController.delegate = delegate
         tabBarController.title = "Irregularity"
-        tabBarController.tabBar.shadowImage = UIImage(named: "transparent")
+//        tabBarController.tabBar.shadowImage = UIImage(named: "transparent")
+        let selectIndex = UserDefaults.standard.object(forKey: "kUD_selectTabBarIndex")
+        tabBarController.selectedIndex = selectIndex as! Int
         tabBarController.shouldHijackHandler = {
             tabbarController, viewController, index in
             if index == 2 {
-                return false
+                return true
             }
             return false
+        }
+        
+        tabBarController.didHijackHandler = {
+            tabbarController, viewController, index in
+            UserDefaults.standard.set(index, forKey: "kUD_selectTabBarIndex")
+            UserDefaults.standard.synchronize()
         }
         
         let home = ATHomeViewController()
@@ -52,6 +60,15 @@ class ATTabBarCtrConfig: NSObject {
         mine.title = "我的"
         
         tabBarController.viewControllers = [homeNav, listenNav, findNav, mineNav]
+        
+        
         return tabBarController
     }
 }
+
+
+//extension ATTabBarCtrConfig: UITabBarControllerDelegate {
+//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+//
+//    }
+//}

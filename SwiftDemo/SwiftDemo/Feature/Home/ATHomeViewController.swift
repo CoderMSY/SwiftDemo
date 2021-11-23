@@ -18,7 +18,7 @@ class ATHomeViewController: ATBaseViewController {
     }
     func setupPageStyle() {
         // 创建DNSPageStyle，设置样式
-        let style = DNSPageStyle()
+        let style = PageStyle()
         style.isTitleViewScrollEnabled = false
         style.isTitleScaleEnabled = true
         style.isShowBottomLine = true
@@ -32,7 +32,12 @@ class ATHomeViewController: ATBaseViewController {
         for vc in viewControllers{
             self.addChild(vc)
         }
-        let pageView = DNSPageView(frame: CGRect(x: 0, y: ATNavBarHeight, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - ATNavBarHeight - 44), style: style, titles: titles, childViewControllers: viewControllers)
+        
+        let status_h = UIApplication.shared.statusBarFrame.size.height
+        let navBar_h = self.navigationController?.navigationBar.frame.size.height ?? 0
+        let tabBar_h = self.tabBarController?.tabBar.frame.size.height ?? 0
+        
+        let pageView = PageView(frame: CGRect(x: 0, y: status_h + navBar_h, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - status_h - navBar_h - tabBar_h), style: style, titles: titles, childViewControllers: viewControllers)
         pageView.contentView.backgroundColor = UIColor.red
         view.addSubview(pageView)
     }

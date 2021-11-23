@@ -24,7 +24,7 @@ let AT_IS_IPHONE_X = SCREEN_HEIGHT == 812.0 ? true : false
 let AT_IS_IPHONE_XRorXSMax = SCREEN_HEIGHT == 896.0 ? true : false
 
 // LBFMNavBarHeight
-let ATNavBarHeight : CGFloat = (AT_IS_IPHONE_X || AT_IS_IPHONE_XRorXSMax) ? 88 : 64
+//let ATNavBarHeight : CGFloat = (AT_IS_IPHONE_X || AT_IS_IPHONE_XRorXSMax) ? 88 : 64
 // LBFMTabBarHeight
 let ATTabBarHeight : CGFloat = (AT_IS_IPHONE_X || AT_IS_IPHONE_XRorXSMax) ? 49 + 34 : 49
 

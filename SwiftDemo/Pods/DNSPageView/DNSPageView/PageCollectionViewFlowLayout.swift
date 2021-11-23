@@ -1,9 +1,9 @@
 //
-//  DNSPageCollectionViewFlowLayout.swift
+//  PageCollectionViewFlowLayout.swift
 //  DNSPageView
 //
 //  Created by Daniels on 2018/2/24.
-//  Copyright © 2018年 Daniels. All rights reserved.
+//  Copyright © 2018 Daniels. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,13 +26,11 @@
 
 import UIKit
 
-/*
- 通过设置offset的值，达到初始化的pageView默认显示某一页的效果，默认显示第一页
- */
-open class DNSPageCollectionViewFlowLayout: UICollectionViewFlowLayout {
+/// 通过设置 offset 的值，达到初始化的 pageView 默认显示某一页的效果，默认显示第一页
+public class PageCollectionViewFlowLayout: UICollectionViewFlowLayout {
     var offset: CGFloat?
     
-    override open func prepare() {
+    public override func prepare() {
         super.prepare()
         guard let offset = offset else { return }
         collectionView?.contentOffset = CGPoint(x: offset, y: 0)

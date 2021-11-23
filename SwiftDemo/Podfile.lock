@@ -1,19 +1,23 @@
 PODS:
-  - DNSPageView (1.0.4)
-  - ESTabBarController-swift (2.6.5)
-  - FSPagerView (0.8.2)
-  - HandyJSON (4.2.1)
-  - JXMarqueeView (0.0.7)
+  - CYLTabBarController (1.29.2):
+    - CYLTabBarController/Core (= 1.29.2)
+  - CYLTabBarController/Core (1.29.2)
+  - DNSPageView (2.1.0)
+  - ESTabBarController-swift (2.8.0)
+  - FSPagerView (0.8.3)
+  - HandyJSON (5.0.2)
+  - JXMarqueeView (0.0.9)
   - Kingfisher (4.10.1)
-  - MJRefresh (3.1.16)
+  - MJRefresh (3.7.2)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - DNSPageView (~> 1.0.1)
-  - ESTabBarController-swift (~> 2.6.2)
+  - CYLTabBarController
+  - DNSPageView
+  - ESTabBarController-swift
   - FSPagerView
-  - HandyJSON (~> 4.2.0)
+  - HandyJSON
   - JXMarqueeView
   - Kingfisher
   - MJRefresh
@@ -21,7 +25,8 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - CYLTabBarController
     - DNSPageView
     - ESTabBarController-swift
     - FSPagerView
@@ -33,16 +38,17 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  DNSPageView: 28b2b5a9fb65cdc222d45dc2ce6247cd3f9365b5
-  ESTabBarController-swift: f31cd3e30bde23619d3b300266f27864d96ffb58
-  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
-  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
-  JXMarqueeView: a318eca76348b1ce8ed3ddc4fc7271ed4262bf30
+  CYLTabBarController: db44b5901a28693a8a4279e4721b3aafdd36c178
+  DNSPageView: 4d77a61f49a5668ec330fb7bd620d81354371ea7
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  JXMarqueeView: 0058108f80f149b25ff3bc3705c1af348fe7be8f
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: f9a97e56395e94acbaea6b2701ff52ae82813f9a
+PODFILE CHECKSUM: 532a98a62516e94401657bc80f9e472ef885ccb4
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.11.2

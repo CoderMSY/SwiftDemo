@@ -12,15 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    lazy var tabBarCtrConfig: TabBarCtrConfig = {
+        let tabBarCtrConfig = TabBarCtrConfig()
+        
+        return tabBarCtrConfig
+    }()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let tabBarConfig = ATTabBarCtrConfig()
-        let tabBarCtr = tabBarConfig.setupTabBar(delegate: self as? UITabBarControllerDelegate)
+//        let tabBarConfig = ATTabBarCtrConfig()
+//        let tabBarCtr = tabBarConfig.setupTabBar(delegate: self as? UITabBarControllerDelegate)
+        
+        self.window = UIWindow()
+        self.window?.frame = UIScreen.main.bounds
         self.window?.backgroundColor = UIColor.white
-        self.window?.rootViewController = tabBarCtr
+        self.window?.rootViewController = tabBarCtrConfig.tabBarCtr
         self.window?.makeKeyAndVisible()
+        
+        UITabBar.appearance().backgroundColor = UIColor.white
+        UITabBar.appearance().tintColor = UIColor(red:255.0/255.0, green:102.0/255.0, blue:0, alpha:1.0)
         
         return true
     }
